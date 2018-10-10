@@ -1,13 +1,13 @@
-# Name:
-# Date:
+# Name: Jonathan Schaeffer
+# Date: 10/12/18
 
 # Run the below only if the library is not already installed.
-# install.packages(dslabs)
+# install.packages("dslabs")
 
 library(dslabs)
 library(dplyr)
 library(tidyverse)
-data(us_contagious_diseases)
+data <- (us_contagious_diseases)
 
 #Question 1.
 
