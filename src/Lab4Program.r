@@ -33,6 +33,15 @@ ggplot(data = dat_allStates ) + geom_bar(mapping = aes(x = yearBlock, y = count,
 ggplot(data = dat_allStates ) + geom_bar(mapping = aes(x = yearBlock, y = count, fill = state), position = "dodge", stat = "identity") + theme(axis.text.x = element_text(angle = 90, hjust = 1, vjust=-0.01))
 #The graph I used already had coloring, so here it is again!
 #Question 6.
+yearlyAutism <- read.table(file.choose(), sep = ",", header = TRUE) #Choose the yearlyAutism.csv file. I did it this way incase your working directory was different.
+ggplot(data = yearlyAutism) + geom_bar(mapping = aes(x = Year, y = End.Population), stat = "identity")
+
+#Looking at the graph, we can see a steady rise in Autism cases starting around the year 1986, but it's hard to draw a correlation
+#because if you view the provided graphs in the repo you will note that the data we have for the vaccine increase/disease decrease
+#ends in the 1970's. And the data I have for Yearly Autism cases starts in 1985. Also, the graph we have shows the decrease in disease
+#NOT an increase in vaccines. So, you can't for sure deduce that more vaccines cause Autism. 
+
+##Also, I got my information from this PDF https://www.dds.ca.gov/Autism/docs/AutismReport_2007.pdf
 
 
 
